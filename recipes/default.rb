@@ -13,6 +13,11 @@ remote_file "/var/lib/tomcat6/webapps/hwlegends.war" do
   mode 00644
 end
 
+remote_file "/var/lib/tomcat6/webapps/hwl-cms.war" do
+  source "https://intere.servebeer.com/hwlegends/hwl-cms.zip"
+  mode 00644
+end
+
 #restart tomcat:
 bash "restart tomcat" do
   code <<-EOS
